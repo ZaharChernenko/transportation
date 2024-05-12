@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<%inc
+#include "../models/Order.h"
+#include "../algorithms/cyrillic.h"
+%>
+<%c++
+    std::vector<Order> orders=@@.get<std::vector<Order>>("orders");
+%>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/profile_style.css">
+</head>
+<body>
+    <header class="index_header">
+        <a class="index_header_a" href="index.html">
+            <img class="index_header_logo" src="img/logo.svg">
+        </a>
+        <h1>ПеревозОчка</h1>
+        <button class="index_header_profile_btn"><a class="index_header_profile_btn_a" href="logout">Выйти</a></button>
+    </header>
+
+    <div class="container">
+        <h2 class="container_header">Ваши заказы:</h2>
+        <table class="orders_table">
+            <tr>
+                <th>Пункт отправления</th>
+                <th>Пункт прибытия</th>
+                <th>Дистанция</th>
+                <th>Машина</th>
+                <th>Стоимость заказа</th>
+                <th>Дата создания заказа</th>
+            </tr>
+            <%c++ for (const Order& order : orders) { %>
+            <tr>
+                <td>{%capitalize(order.getDeparture())%}</td>
+                <td>{%capitalize(order.getArrival())%}</td>
+                <td>{%order.getDistance()%}</td>
+                <td>{%order.getPrice()%}</td>
+                <td>{%order.getCarName()%}</td>
+                <td>{%order.getOrderData()%}</td>
+            </tr>
+            <%c++ } %>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #222; /* Темный фон */
+    color: #eee; /* Светлый текст */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+.container {
+  background-color: #333; /* Темнее фона */
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  width: 400px;
+}
+  
+  h1 {
+    color: #a020f0; /* Фиолетовый цвет */
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  } 
+
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: 95%;
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выбор направления</title>
+    <link rel="stylesheet" href="styles/index_style.css"> 
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/index.js"></script>
+</head>
+<body>
+    <header class="index_header">
+        <a class="index_header_a" href="index.html">
+            <img class="index_header_logo" src="img/logo.svg">
+        </a>
+        <h1>ПеревозОчка</h1>
+        <button class="index_header_profile_btn"><a class="index_header_profile_btn_a" href="profile.html">Профиль</a></button>
+    </header>
+    <div class="container">
+        <h2>Выберите направление:</h2>
+
+        <form action="#" method="post" id="registrationForm"> 
+            <div class="destination_div">
+                <div class="input-container">
+                    <input type="text" id="departure" name="departure" placeholder="Город отправления" oninput="checkForm()">
+                </div>
+                <div class="input-container">
+                    <input type="text" id="arrival" name="arrival" placeholder="Город прибытия" oninput="checkForm()">
+                </div>
+            </div>
+
+            <h2>Выберите машину:</h2>
+                <div class="cars_div">
+                    <input class="car_input" id="gaz_bort_input" name="car" type="radio" value="gaz_bort_4m" onchange="checkForm()">
+                    <input class="car_input" id="gaz_tent_input" name="car" type="radio" value="gaz_tent_4m" onchange="checkForm()">
+                    <input class="car_input" id="gaz_pir_input" name="car" type="radio" value="gaz_pir_4m" onchange="checkForm()">
+                    <input class="car_input" id="fur_bort_input" name="car" type="radio" value="fur_bort_6m" onchange="checkForm()">
+
+                    <label for="gaz_bort_input" class="car_label car_label_one">
+                        <h3>Газель бортовая 4м</h3>
+                        <img class="car_img" src="img/gaz_bort_4m.png" alt="">
+                        <div class="car_descr_div">
+                            <span class="weight"><img class="weight_img" src="img/weight.svg"><p class="car_right_text_div_p">1.5 т</p></span>
+                            <span class="lenght"><img class="lenght_img" src="img/length.svg"><p class="car_right_div_p">4 м</p></span>   
+                            <span class="width"><img class="width_img" src="img/width.svg"><p class="car_right_div_p">1.7 м</p></span>   
+                        </div>
+                    </label>
+ 
+                    <label for="gaz_tent_input" class="car_label car_label_two">
+                        <h3>Газель тентованная 4м</h3>
+                        <img class="car_img" src="img/gaz_tent_4m.png" alt="">
+                        <div class="car_descr_div">
+                            <span class="weight"><img class="weight_img" src="img/weight.svg"><p class="car_right_text_div_p">1.5 т</p></span>
+                            <span class="lenght"><img class="lenght_img" src="img/length.svg"><p class="car_right_div_p">4 м</p></span>   
+                            <span class="width"><img class="width_img" src="img/width.svg"><p class="car_right_div_p">1.7 м</p></span>   
+                        </div>
+                    </label>     
+
+                    <label for="gaz_pir_input" class="car_label car_label_three">                       
+                        <h3>Газель пирамида 4м</h3>
+                        <img class="car_img" src="img/gaz_pir_4m.png" alt="">
+                        <div class="car_descr_div">
+                            <span class="weight"><img class="weight_img" src="img/weight.svg"><p class="car_right_text_div_p">1.5 т</p></span>
+                            <span class="lenght"><img class="lenght_img" src="img/length.svg"><p class="car_right_div_p">4 м</p></span>   
+                            <span class="width"><img class="width_img" src="img/width.svg"><p class="car_right_div_p">1.7 м</p></span>   
+                        </div>
+                    </label>
+
+                    <label for="fur_bort_input" class="car_label car_label_four">       
+                        <h3>Грузовик фургон 6м</h3>
+                        <img class="car_img" src="img/fur_bort_6m.png" alt="">
+                        <div class="car_descr_div">
+                            <span class="weight"><img class="weight_img" src="img/weight.svg"><p class="car_right_text_div_p">10 т</p></span>
+                            <span class="lenght"><img class="lenght_img" src="img/length.svg"><p class="car_right_div_p">6 м</p></span>   
+                            <span class="width"><img class="width_img" src="img/width.svg"><p class="car_right_div_p">2.4 м</p></span>   
+                        </div>
+                    </label>
+                </div>
+            <div class="insurance_div">
+                <input class="insurance_input" id="insurance_input" name="ensurance" type="checkbox" value="is_insurance">
+                <label for="insurance_input" class="insurance_input_label">Страховка</label>
+            </div>
+            
+            <div class="btns_div">
+                <button class="count_cost_btn" type="submit" id="countCostBtn" disabled>Расчитать стоимость</button>
+                <button class="reset_btn" type="reset" id="resetBtn">Сбросить</button>
+            </div>
+
+        </form>
+    </div>
+
+    <div class="costs_container">
+
+    </div>
+</body>
+</html>

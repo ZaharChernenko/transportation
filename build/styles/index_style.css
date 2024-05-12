@@ -1,0 +1,249 @@
+body {
+    padding: 25px 7.5vw 25px 7.5vw;
+    font-family: Helvetica, Arial, sans-serif;
+    background-color: #222; /* Темный фон */
+    color: #eee; /* Светлый текст */
+    min-height: 100vh;
+    margin: 0;
+}
+
+.index_header {
+    margin-bottom: 5vh;
+    height: 7.5vh;
+    padding: 15px 20px 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.index_header_logo {
+    width: 5vw;
+}
+
+.index_header_profile_btn {
+    min-height: 6vh;
+}
+
+.index_header_profile_btn_a {
+    color: white;
+}
+
+.container {
+    margin-bottom: 5vh;
+    padding: 5px 25px 5px 25px;
+    background-color: #333; /* Темнее фона */
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.destination_div {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10%;
+}
+
+.destination_div .input-container {
+    display: flex;
+    flex-grow: 1; /*Чтобы контейнеры заняли все пространство*/
+}
+
+.input-container input {
+    width: 100%;
+}
+
+.suggestions {
+    display: none;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #555;
+    border-radius: 3px;
+    background-color: #444;
+}
+  
+.suggestions li {
+    padding: 5px;
+    cursor: pointer;
+}
+  
+.suggestions li:hover {
+    background-color: #a020f0; /* Добавляем эффект при наведении */
+}
+
+.input-container {
+    position: relative; /* Чтобы список подсказок позиционировался относительно контейнера */
+}
+
+.cars_div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    @media (max-width: 650px) {
+        gap: 2vw;
+    }
+    @media (min-width: 650px) {
+        gap: 1vw;
+    }
+    margin-bottom: 2vh;
+}
+
+.car_label {
+    @media (max-width: 650px) {
+        flex: 1 0 100%;
+    }
+    @media (max-width: 900px) {
+        width: 48%;
+    }
+    @media (min-width: 900px) {
+        width: 32%;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: white 1px dashed;
+    border-radius: 15px;
+    cursor: pointer;
+
+    transition: border 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
+}
+
+.car_label:hover {
+    border: white 1px solid;
+    background-color: #444;
+}
+
+.car_input {
+    display: none;
+}
+
+.car_img {
+    align-self: center;
+    max-width: 20vw;
+}
+
+.car_descr_div {
+    display: flex;
+}
+
+.weight, .lenght, .width {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.weight_img {
+    width: 9%;
+}
+
+.lenght_img {
+    width: 10%;
+}
+
+.width_img {
+    width: 10%;
+}
+
+#gaz_bort_input:checked ~ label.car_label_one,
+#gaz_tent_input:checked ~ label.car_label_two,
+#gaz_pir_input:checked ~ label.car_label_three,
+#fur_bort_input:checked ~ label.car_label_four {
+    border-color: transparent;
+    background: #a020f0;
+}
+
+.btns_div {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+}
+
+.insurance_div {
+    margin-bottom: 2vh;
+    display: flex;
+    gap: 5px
+}
+
+.insurance_input_label {
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.count_cost_btn:disabled {
+    background-color: #ccc; /* Серый фон */
+    opacity: 0.5;         /* Полупрозрачность */
+}
+
+.cost_div {
+    @media (max-width: 1200px) {
+        width: 100%;
+    }
+    @media (min-width: 1200px) {
+        width: 44%;
+    }
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px 25px 10px 25px;
+    background-color: #333; /* Темнее фона */
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+
+.cost_div_text_div {
+    width: 49%;
+}
+
+.cost_div_text_div p{
+    text-align: left;
+}
+
+.cost_div_img_div {
+    width: 49%;
+}
+
+.cost_div_img_div img {
+    width: 100%;
+}
+
+.cost_div_btn_div {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-shrink: 0;
+    width: 100%;
+}
+
+.costs_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s forwards; /* Анимация с названием fadeOut, длительностью 0.5s, запускается один раз */
+  }
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1; /* Начальное состояние: элемент полностью видим */
+    }
+    100% {
+      opacity: 0; /* Конечное состояние: элемент полностью прозрачен */
+      height: 0; /* Высота элемента уменьшается до 0 */
+      margin: 0; /* Верхний и нижний отступы становятся 0 */
+      padding: 0; /* Внутренние отступы становятся 0 */
+      overflow: hidden; /* Скрываем содержимое элемента */
+    }
+  }

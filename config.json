@@ -1,0 +1,33 @@
+{   "listeners": [
+    {
+      "address": "0.0.0.0",
+      "port": 8848,
+      "https": false
+    }
+  ],
+  "app": {
+    "number_of_threads": 10,
+    "server_header_field": "",
+    "enable_session": true,
+    "session_timeout": 36000
+  },
+  "db_clients":[
+    {
+      "name":"data",
+      "rdbms": "sqlite3",
+      "dbname": "database",
+      "is_fast": false,
+      "connection_number": 30,
+      "filename": "database.db"
+    },
+
+    {
+      "name":"cities",
+      "rdbms": "sqlite3",
+      "dbname": "cities",
+      "is_fast": false,
+      "connection_number": 30,
+      "filename": "cities.db"
+    }
+  ] 
+}
