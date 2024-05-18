@@ -10,7 +10,7 @@
 #include <regex>
 
 #define ASYNC_AUTH
-// #define DEBUG_AUTH
+#define DEBUG_AUTH
 
 using Callback = std::function<void(const drogon::HttpResponsePtr&)>;
 

@@ -10,7 +10,7 @@
 #include <string>
 #include <unordered_set>
 
-// #define BUSINESS_HANDLER_DEBUG
+#define BUSINESS_HANDLER_DEBUG
 
 using Callback = std::function<void(const drogon::HttpResponsePtr&)>;
 

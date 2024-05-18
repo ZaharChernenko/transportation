@@ -1,0 +1,15 @@
+# docker compose up
+# docker exec -it transportation-transportation-1 bash
+
+version: "3.8"
+
+services:
+  transportation:
+    build: .
+    ports:
+      - "8848:8848"
+    volumes:
+      - ./build/database.db:/home/transportation/build/database.db
+      - ./build/cities.db:/home/transportation/build/cities.db
+    stdin_open: true
+    tty: true
