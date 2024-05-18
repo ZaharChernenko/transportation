@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <codecvt>
 #include <locale>
 #include <string>

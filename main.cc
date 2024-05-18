@@ -11,7 +11,6 @@ using namespace drogon;
 using Callback = std::function<void(const HttpResponsePtr&)>;
 
 int main() {
-    setlocale(LC_ALL, "Russian");
     app().registerHandler("/", &rootHandler);
     app().registerHandler("/register", &registerUser, {drogon::HttpMethod::Post});
     app().registerHandler("/login", &loginUser, {drogon::HttpMethod::Post});

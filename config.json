@@ -1,4 +1,5 @@
-{   "listeners": [
+{
+  "listeners": [
     {
       "address": "0.0.0.0",
       "port": 8848,
@@ -11,23 +12,22 @@
     "enable_session": true,
     "session_timeout": 36000
   },
-  "db_clients":[
+  "db_clients": [
     {
-      "name":"data",
+      "name": "data",
       "rdbms": "sqlite3",
       "dbname": "database",
       "is_fast": false,
       "connection_number": 30,
       "filename": "database.db"
     },
-
     {
-      "name":"cities",
+      "name": "cities",
       "rdbms": "sqlite3",
       "dbname": "cities",
       "is_fast": false,
       "connection_number": 30,
       "filename": "cities.db"
     }
-  ] 
+  ]
 }
